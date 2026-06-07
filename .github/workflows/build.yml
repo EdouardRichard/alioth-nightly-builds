@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir -p ~/.config
           cp xiaomi-alioth.cfg ~/.config/pmbootstrap_v3.cfg
-          pmbootstrap -y init
+          yes '' | pmbootstrap -y init
           cd ~/.local/var/pmbootstrap/cache_git/pmaports
           git remote add mainlining https://github.com/mainlining/pmaports.git
           git fetch mainlining nikroks/alioth
