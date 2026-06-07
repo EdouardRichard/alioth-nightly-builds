@@ -28,7 +28,8 @@ jobs:
 
       - name: Set up pmaports
         run: |
-          pmbootstrap init --device xiaomi-alioth --aports-branch edge --ui none --non-interactive 
+          cp xiaomi-alioth.cfg ~/.config/pmbootstrap_v3.cfg
+          pmbootstrap -y init
           cd ~/.local/var/pmbootstrap/cache_git/pmaports
           git remote add mainlining https://github.com/mainlining/pmaports.git
           git fetch mainlining nikroks/alioth
